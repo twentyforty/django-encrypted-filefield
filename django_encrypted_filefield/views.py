@@ -1,10 +1,12 @@
 import os
 
 from django.conf import settings
-from django.core.validators import URLValidator, ValidationError
+from django.core.validators import URLValidator
+from django.core.exceptions import ValidationError
 from django.http import Http404, HttpResponse
 from django.views.generic import View
 
+import pylibmagic
 import magic
 import requests
 
